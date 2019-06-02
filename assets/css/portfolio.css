@@ -1,0 +1,326 @@
+/*--------------------Defaults--------------------*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:url(/interlaced.png)
+}
+
+/* -------------------Navbar---------------------- */
+
+.navbar{
+    background-color:#fff;
+    width:100%;
+    box-shadow: 0 1px 4px black;
+    margin-bottom:20px;
+}
+
+.nav-content-wrapper{
+    width:960px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:auto;
+}
+
+.navbar h1{
+   background-color: #4aaaa5;
+   padding:20px;
+   color:#fff;
+   font-weight: 100;
+}
+.navbar ul{
+    list-style-type:none;
+}
+.navbar li{
+    display:inline;
+    margin-left:30px;
+
+}
+.navbar a{
+    text-decoration: none;
+    color:#777777;
+}
+
+/* --------------------Main----------------------- */
+
+.main{
+    width:960px;
+    background:#fff;
+    padding:20px;
+    /* box-shadow: 0 1px 4px black; */
+    border:1px solid #777;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:40px;
+    height:50vh;
+    display:flex;
+    flex-direction: column;
+    box-shadow: 0 1px 4px black;
+    
+}
+
+.main h1{
+    color:#4aaaa5;
+    margin-bottom:20px;
+}
+
+.line{
+    height:1px;
+    width:99%;
+    background:#777;
+    margin-bottom:20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.gallery-wrapper{
+    width:100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "b1 b2 b3";
+    margin-top:10px;
+}
+
+.box1{
+    grid-area:b1;
+    width:300px;
+    height:200px;
+    background:url(/assets/images/hero.jpg);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    border: #4aaaa5 solid 6px;
+    position: relative;
+    
+}
+
+.box1 h2{
+    width:100%;
+    color:#fff;
+    background:#4aaaa5;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom:5%;
+    padding:5px;
+}
+.box2{
+    grid-area:b2;
+    width:300px;
+    height:200px; 
+    background:url(/assets/images/hero.jpg);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    border: #4aaaa5 solid 6px;
+    position: relative;
+}
+.box2 h2{
+    width:100%;
+    color:#fff;
+    background:#4aaaa5;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom:5%;
+    padding:5px;
+}
+.box3{
+    grid-area: b3;
+    width:300px;
+    height:200px;
+    background:url(/assets/images/hero.jpg);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    border: #4aaaa5 solid 6px;
+    position: relative;
+}
+.box3 h2{
+    width:100%;
+    color:#fff;
+    background:#4aaaa5;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom:5%;
+    padding:5px;
+}
+
+/* .boxes{
+    margin-bottom:20px;
+} */
+
+/* --------------------Footer--------------------- */
+
+.footer{
+    width:100%;
+    background:#666;
+    height:10vh;
+    position:fixed;
+    bottom:0;
+    border-top:#4aaaa5 solid 8px;
+    text-align: center;
+    color:#fff;
+    
+}
+.footer p{
+    position: relative;
+    bottom:-50px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 980px){
+    body{
+        background: url(/assets/images/interlaced.png);
+    }
+
+    .container{
+        width:100%;
+    }
+    .navbar{
+        width:100%;
+    }
+    .nav-content-wrapper{
+        width:90vw;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main{
+        width:60vw;
+        float: left;
+        position: relative;
+        left:5vw;
+        height:80vh;
+        margin-top:0;
+        bottom:1vh;
+        box-shadow: 0 1px 4px black;
+    
+    }
+    .gallery-wrapper{
+        display:flex;
+        flex-wrap: wrap;
+        
+    }
+    .boxes{
+        margin-bottom: 1vh;
+    }
+   
+   
+}
+
+@media screen and (max-width:768px){
+    body{
+        background: url(/assets/images/interlaced.png);
+    }
+
+    .container{
+        width:100%;
+    }
+    .navbar{
+        width:100%;
+    }
+    .nav-content-wrapper{
+        width:95vw;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main{
+        width:95vw;
+        left:2.5vw;
+        box-shadow: 0 1px 4px black;
+    }
+    .gallery-wrapper{
+        display:flex;
+        flex-wrap: wrap;
+        
+    }
+    .boxes{
+        margin-bottom: 1vh;
+        margin-left:1vw;
+    }
+
+    
+}
+
+@media screen and (max-width: 640px){
+    body{
+        background: url(/assets/images/interlaced.png);
+    }
+
+    .container{
+        width:100%;
+    }
+    .navbar{
+        width:100%;
+        
+    }
+    .nav-content-wrapper{
+        width:100vw;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .nav-content-wrapper h1{
+        display:block;
+        width:100%;
+        text-align: center;
+    }
+    .nav-content-wrapper ul{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height:60px;
+        
+    }
+    .main{
+        width:95vw;
+        left:2.5vw;
+        position: absolute;
+        top:16vh;
+        height:72vh;
+
+        
+    }
+
+    .gallery-wrapper{
+        display:flex;
+        flex-wrap: wrap;
+        margin-bottom:1vh;
+        padding:0;
+        flex-direction: column;
+        position: relative;
+        top:-3vh;
+    }
+    .boxes{
+        
+        width:50vw;
+        margin-left:auto;
+        margin-right: auto;
+        
+        
+        
+        
+        
+    }
+    .box3{
+        margin-bottom: 0;
+
+    }
+
+    .main h1{
+        border-bottom: 1px solid black;
+        
+    }
+}
